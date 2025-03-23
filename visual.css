@@ -1,0 +1,56 @@
+header{
+    background-color: rgba(112, 255, 255, 0.822);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+}
+
+.body_page{
+    background-color: rgb(253, 255, 113);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa_com_caixas_resposta{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.caixa_resposta{
+    min-width: 100px;
+    min-height: 100px;
+    background-color: red;
+    border: 1px black solid;
+    border-radius: 15% ;
+    box-shadow: 6px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer{
+    height: 20vh;
+    background-color: rgba(112, 255, 255, 0.822);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
