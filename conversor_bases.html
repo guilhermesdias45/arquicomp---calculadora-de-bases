@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="visual.css">
 </head>
 <body>
     <h1>SPTecher's Machine</h1>
@@ -19,23 +20,6 @@
     <div id="caixa_resposta">base 2: </div>
     <div id="caixa_resposta2">base 8: </div>
     <div id="caixa_resposta3">base 16: </div>
-
 </body>
+<script src="funcional.js"></script>
 </html>
-<script>
-    function Mostrar(){
-        
-    }
-
-    function Converter(){
-        base = Number(ipt_tipo_base.value);
-        numero = Number(ipt_numero.value);
-        mensagem_base2 = `<br>base 2: ${numero.toString(2)}`;
-        mensagem_base8 = `<br>base 8: ${numero.toString(8)}`;
-        mensagem_base10 = `<br>base 10: ${numero.toString(10)}`;
-        mensagem_base16 = `<br>base 16: ${numero.toString(16)}`;
-        resp = caixa_resposta;
-
-        
-    }
-</script>
