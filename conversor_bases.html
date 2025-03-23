@@ -16,21 +16,25 @@
     </select>
     <input type="number" id="ipt_numero" placeholder="Número para Converter">
     <button onclick="Converter()">Calcular</button>
-    <div id="base_1"></div>
-    <div id="base_2"></div>
-    <div id="base_3"></div>
+    <div id="caixa_resposta"></div>
+
 </body>
 </html>
 <script>
     function Converter(){
         base = Number(ipt_tipo_base.value);
         numero = Number(ipt_numero.value);
-        resp1 = base_1;
-        resp2 = base_2;
-        resp3 = base_3;
+        mensagem_base2 = `<br>base 2: ${numero.toString(2)}`;
+        mensagem_base8 = `<br>base 8: ${numero.toString(8)}`;
+        mensagem_base10 = `<br>base 10: ${numero.toString(10)}`;
+        mensagem_base16 = `<br>base 16: ${numero.toString(16)}`;
+        resp = caixa_resposta;
 
-        resp1.innerHTML = `base 2: ${numero.toString(2)}`;
-        resp2.innerHTML = `base 8: ${numero.toString(8)}`;
-        resp3.innerHTML = `base 16: ${numero.toString(16)}`;
+        
+
+        resp.innerHTML += mensagem_base2;
+        resp.innerHTML += mensagem_base8;
+        resp.innerHTML += mensagem_base10;
+        resp.innerHTML += mensagem_base16;
     }
 </script>
