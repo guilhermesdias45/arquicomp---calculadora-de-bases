@@ -8,7 +8,7 @@
 <body>
     <h1>SPTecher's Machine</h1>
     <h4>Digite um número decimal:</h4>
-    <select name="" id="ipt_tipo_base">
+    <select name="" id="ipt_tipo_base" onchange="Mostrar()">
         <option value="2">base 2 / binário</option>
         <option value="8">base 8 / octal</option>
         <option value="10">base 10 / decimal</option>
@@ -16,11 +16,17 @@
     </select>
     <input type="number" id="ipt_numero" placeholder="Número para Converter">
     <button onclick="Converter()">Calcular</button>
-    <div id="caixa_resposta"></div>
+    <div id="caixa_resposta">base 2: </div>
+    <div id="caixa_resposta2">base 8: </div>
+    <div id="caixa_resposta3">base 16: </div>
 
 </body>
 </html>
 <script>
+    function Mostrar(){
+        
+    }
+
     function Converter(){
         base = Number(ipt_tipo_base.value);
         numero = Number(ipt_numero.value);
@@ -31,10 +37,5 @@
         resp = caixa_resposta;
 
         
-
-        resp.innerHTML += mensagem_base2;
-        resp.innerHTML += mensagem_base8;
-        resp.innerHTML += mensagem_base10;
-        resp.innerHTML += mensagem_base16;
     }
 </script>
