@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SPTecher's Machine</h1>
+    <h4>Digite um número decimal:</h4>
+    <select name="" id="ipt_tipo_base">
+        <option value="2">base 2 / binário</option>
+        <option value="8">base 8 / octal</option>
+        <option value="10">base 10 / decimal</option>
+        <option value="16">base 16 / hexadecimal</option>
+    </select>
+    <input type="number" id="ipt_numero" placeholder="Número para Converter">
+    <button onclick="Converter()">Calcular</button>
+    <div id="base_1"></div>
+    <div id="base_2"></div>
+    <div id="base_3"></div>
+</body>
+</html>
+<script>
+    function Converter(){
+        base = Number(ipt_tipo_base.value);
+        numero = Number(ipt_numero.value);
+        resp1 = base_1;
+        resp2 = base_2;
+        resp3 = base_3;
+
+        resp1.innerHTML = `base 2: ${numero.toString(2)}`;
+        resp2.innerHTML = `base 8: ${numero.toString(8)}`;
+        resp3.innerHTML = `base 16: ${numero.toString(16)}`;
+    }
+</script>
