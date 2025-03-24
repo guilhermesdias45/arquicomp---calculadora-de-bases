@@ -32,24 +32,27 @@ function Converter() {
     }
 }
 
-function Exibir(){
-    coloracao = ipt_coloracao;
+function Exibir() {
+    var coloracao = document.getElementById("ipt_coloracao").value;
 
-    if(coloracao == "claro"){
-        getElementsByTagName("header").style.backgroundColor ="rgba(112, 255, 255, 0.822)";
-        getElementsByClassName(body_page).style.backgroundColor = "rgb(253, 255, 113)";
-        getElementsByClassName(caixa_resposta).style.backgroundColor = "red";
-        getElementsByTagName("footer").style.backgroundColor ="rgba(112, 255, 255, 0.822)";
+    if (coloracao == "claro") {
+        document.getElementsByTagName("header")[0].style.backgroundColor = "rgba(112, 255, 255, 0.822)";
+        document.getElementsByClassName("body_page")[0].style.backgroundColor = "rgb(253, 255, 113)";
+        for(contador = 0; contador < 3; contador++){
+            document.getElementsByClassName("caixa_resposta")[contador].style.backgroundColor = "red";
+        }
+        document.getElementsByTagName("footer")[0].style.backgroundColor = "rgba(112, 255, 255, 0.822)";
+        document.getElementsByTagName("body")[0].style.color = "black";
     }
-    if(coloracao == "escuro"){
-        getElementsByTagName("header").style.backgroundColor ="#007BFF";
-        getElementsByClassName(body_page).style.backgroundColor = "#1C1C1C";
-        getElementsByClassName(caixa_resposta).style.backgroundColor = "red";
-        getElementsByTagName("footer").style.backgroundColor ="#F8F9FA";
+
+    if (coloracao == "escuro") {
+        document.getElementsByTagName("header")[0].style.backgroundColor = "#007BFF";
+        document.getElementsByClassName("body_page")[0].style.backgroundColor = "#1C1C1C";
+        for(contador = 0; contador < 3; contador++){
+            document.getElementsByClassName("caixa_resposta")[contador].style.backgroundColor = "yellow";
+            document.getElementsByClassName("letra_bloco")[contador].style.color = "black";
+        }
+        document.getElementsByTagName("footer")[0].style.backgroundColor = "#007BFF";
+        document.getElementsByTagName("body")[0].style.color = "white";
     }
 }
-
-header
-.body_page
-.caixa_resposta
-footer

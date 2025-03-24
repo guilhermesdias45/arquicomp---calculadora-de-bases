@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>SPTecher's Machine</h1>
-        <select name="" id="ipt_coloracao">
+        <select name="" id="ipt_coloracao" onchange="Exibir()">
             <option value="claro">Claro</option>
             <option value="escuro">Escuro</option>
         </select>
@@ -26,13 +26,13 @@
             <button onclick="Converter()">Calcular</button>
         <div class="caixa_com_caixas_resposta">
             <div id="caixa_resposta1" class="caixa_resposta">
-                <p>1º base<br></p>
+                <p class="letra_bloco">1º base<br></p>
             </div>
             <div id="caixa_resposta2" class="caixa_resposta">
-                <p>2º base<br></p>
+                <p class="letra_bloco">2º base<br></p>
             </div>
             <div id="caixa_resposta3" class="caixa_resposta">
-                <p>3º base<br></p>
+                <p class="letra_bloco">3º base<br></p>
             </div>
         </div>
     </section>
