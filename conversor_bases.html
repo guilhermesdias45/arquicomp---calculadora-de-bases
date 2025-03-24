@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Bases</title>
     <link rel="stylesheet" href="visual.css">
 </head>
+
 <body>
     <header>
-        <h1>SPTecher's Machine</h1>
-        <select name="" id="ipt_coloracao" onchange="Exibir()">
+        <h1>SPTecher's Machine V1</h1>
+        <select id="ipt_coloracao" onchange="Exibir()">
             <option value="claro">Claro</option>
             <option value="escuro">Escuro</option>
         </select>
     </header>
     <section class="body_page">
-        <h4>Digite um número decimal:</h4>
-        <select name="" id="ipt_tipo_base">
+        <h2>Digite um número decimal:</h2>
+        <select id="ipt_tipo_base">
             <option value="2">base 2 / binário</option>
             <option value="8">base 8 / octal</option>
             <option value="10">base 10 / decimal</option>
             <option value="16">base 16 / hexadecimal</option>
         </select>
         <input type="text" id="ipt_numero" placeholder="Número para Converter">
-            <button onclick="Converter()">Calcular</button>
+        <button onclick="Converter()">Calcular</button>
         <div class="caixa_com_caixas_resposta">
             <div id="caixa_resposta1" class="caixa_resposta">
                 <p class="letra_bloco">1º base<br></p>
@@ -36,47 +38,43 @@
             </div>
         </div>
     </section>
-    <section>
-        <h1>Calculadora de Operações entre Bases</h1>
-
-        <h3>Escolha a base e insira os números para as operações:</h3>
-    
-        <label for="tipo_base1">Base do 1º número:</label>
-        <select id="tipo_base1">
-            <option value="2">Binário</option>
-            <option value="8">Octal</option>
-            <option value="10">Decimal</option>
-            <option value="16">Hexadecimal</option>
+    <section class="body_page">
+        <h2>Calculadora de Operações entre Bases:</h2>
+        <h3>Informe os números, suas respectivas bases e a Operação Aritmética para calcular:</h3>
+        <div class="bloco_aritmetica">
+        <div class="numero_aritmetica">
+            <select id="ipt_tipo_base1">
+                <option value="2">Binário</option>
+                <option value="8">Octal</option>
+                <option value="10">Decimal</option>
+                <option value="16">Hexadecimal</option>
+            </select>
+            <input type="text" id="ipt_numero1" placeholder="Número 1">
+        </div>
+        <select id="ipt_tipo_calculo">
+            <option value="soma">Soma (+)</option>
+            <option value="subtracao">Subtração (-)</option>
+            <option value="multiplicacao">Multiplicação (x)</option>
+            <option value="divisao">Divisão (÷)</option>
         </select>
-    
-        <label for="numero1">Número 1:</label>
-        <input type="text" id="numero1" placeholder="Digite o número 1">
-    
-        <br><br>
-    
-        <label for="tipo_base2">Base do 2º número:</label>
-        <select id="tipo_base2">
-            <option value="2">Binário</option>
-            <option value="8">Octal</option>
-            <option value="10">Decimal</option>
-            <option value="16">Hexadecimal</option>
-        </select>
-    
-        <label for="numero2">Número 2:</label>
-        <input type="text" id="numero2" placeholder="Digite o número 2">
-    
-        <br><br>
-    
-        <button onclick="operar('+')">Soma (+)</button>
-        <button onclick="operar('-')">Subtração (-)</button>
-        <button onclick="operar('*')">Multiplicação (×)</button>
-        <button onclick="operar('/')">Divisão (÷)</button>
-    
+        <div class="numero_aritmetica">
+            <select id="ipt_tipo_base2">
+                <option value="2">Binário</option>
+                <option value="8">Octal</option>
+                <option value="10">Decimal</option>
+                <option value="16">Hexadecimal</option>
+            </select>
+            <input type="text" id="ipt_numero2" placeholder="Número 2">
+        </div>
+        <button onclick="Calcular()">Calcular</button>
+    </div>
+    <div>
         <h2>Resultado:</h2>
-        <p id="resultado_binario">Binário: </p>
-        <p id="resultado_octal">Octal: </p>
-        <p id="resultado_decimal">Decimal: </p>
-        <p id="resultado_hexadecimal">Hexadecimal: </p>
+        <p id="resultado_2">Binário: </p>
+        <p id="resultado_8">Octal: </p>
+        <p id="resultado_10">Decimal: </p>
+        <p id="resultado_16">Hexadecimal: </p>
+    </div>
     </section>
     <footer>
         <div>
@@ -96,4 +94,5 @@
     </footer>
 </body>
 <script src="funcional.js"></script>
+
 </html>
