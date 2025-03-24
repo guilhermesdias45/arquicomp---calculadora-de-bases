@@ -1,58 +1,55 @@
-var estado = 'convertendo'; // Inicialmente estamos no estado de conversão
-
 function Converter() {
-    // Pega os valores diretamente dos campos de entrada
-    var base = Number(ipt_tipo_base.value);  // Base selecionada
-    var numero = Number(ipt_numero.value);   // Número inserido
-
-    // Verifica se o número é válido
-    if (isNaN(numero)) {
-        alert("Por favor, insira um número válido!");
-        return;
+    var base = Number(ipt_tipo_base.value);
+    var numero = ipt_numero.value;
+    resp1 = caixa_resposta1;
+    resp2 = caixa_resposta2;
+    resp3 = caixa_resposta3;
+    base10 = 0;
+    
+    if (base == 2) {
+        var base10 = parseInt(numero, 2);
+        resp1.innerHTML = `Base 8:<br>${base10.toString(8)}`;
+        resp2.innerHTML = `Base 10:<br>${base10.toString(10)}`;
+        resp3.innerHTML = `Base 16:<br>${base10.toString(16)}`;
     }
-
-    if (estado === 'convertendo') {
-        // Converter o número para as bases 2, 8, 10 e 16
-        var mensagem_base2 = `Base 2: ${numero.toString(2)}`;
-        var mensagem_base8 = `Base 8: ${numero.toString(8)}`;
-        var mensagem_base10 = `Base 10: ${numero.toString(10)}`;
-        var mensagem_base16 = `Base 16: ${numero.toString(16)}`;
-
-        // Exibe as mensagens de conversão nas caixas de resposta
-        caixa_resposta.innerHTML = mensagem_base2;
-        caixa_resposta2.innerHTML = mensagem_base8;
-        caixa_resposta3.innerHTML = mensagem_base16;
-
-        // Muda o estado para "invertendo"
-        estado = 'invertendo'; 
+    if(base == 8){
+        var base10 = parseInt(numero, 8);
+        resp1.innerHTML = `Base 2:<br>${base10.toString(2)}`;
+        resp2.innerHTML = `Base 10:<br>${base10.toString(10)}`;
+        resp3.innerHTML = `Base 16:<br>${base10.toString(16)}`;
+    }
+    if(base == 10){
+        var base10 = parseInt(numero, 10);
+        resp1.innerHTML = `Base 2:<br>${base10.toString(2)}`;
+        resp2.innerHTML = `Base 8:<br>${base10.toString(8)}`;
+        resp3.innerHTML = `Base 16:<br>${base10.toString(16)}`;
+    }
+    if(base == 16){
+        var base10 = parseInt(numero, 16);
+        resp1.innerHTML = `Base 2:<br>${base10.toString(2)}`;
+        resp2.innerHTML = `Base 8:<br>${base10.toString(8)}`;
+        resp3.innerHTML = `Base 10:<br>${base10.toString(10)}`;
     }
 }
 
-function Inverter() {
-    // Pega os valores novamente dos campos de entrada
-    var baseOriginal = Number(ipt_tipo_base.value); // Base selecionada
-    var numero = ipt_numero.value; // Número inserido
+function Exibir(){
+    coloracao = ipt_coloracao;
 
-    // Verifica se o número é válido
-    if (isNaN(numero)) {
-        alert("Por favor, insira um número válido!");
-        return;
+    if(coloracao == "claro"){
+        getElementsByTagName("header").style.backgroundColor ="rgba(112, 255, 255, 0.822)";
+        getElementsByClassName(body_page).style.backgroundColor = "rgb(253, 255, 113)";
+        getElementsByClassName(caixa_resposta).style.backgroundColor = "red";
+        getElementsByTagName("footer").style.backgroundColor ="rgba(112, 255, 255, 0.822)";
     }
-
-    var numeroInvertido = 0;
-
-    // Verificar qual base foi escolhida para inverter
-    if (baseOriginal === 2) {
-        numeroInvertido = parseInt(numero, 2); // Converter de binário para decimal
-    } else if (baseOriginal === 8) {
-        numeroInvertido = parseInt(numero, 8); // Converter de octal para decimal
-    } else if (baseOriginal === 16) {
-        numeroInvertido = parseInt(numero, 16); // Converter de hexadecimal para decimal
+    if(coloracao == "escuro"){
+        getElementsByTagName("header").style.backgroundColor ="#007BFF";
+        getElementsByClassName(body_page).style.backgroundColor = "#1C1C1C";
+        getElementsByClassName(caixa_resposta).style.backgroundColor = "red";
+        getElementsByTagName("footer").style.backgroundColor ="#F8F9FA";
     }
-
-    // Exibe o número de volta para decimal (base 10)
-    caixa_resposta.innerHTML = `Base 10 (inversão): ${numeroInvertido}`;
-
-    // Muda o estado de volta para "convertendo"
-    estado = 'convertendo'; 
 }
+
+header
+.body_page
+.caixa_resposta
+footer

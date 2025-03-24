@@ -7,46 +7,32 @@
     <link rel="stylesheet" href="visual.css">
 </head>
 <body>
-    <h1>SPTecher's Machine</h1>
-    <h4>Digite um número decimal:</h4>
-    <select name="" id="ipt_tipo_base" onchange="Mostrar()">
-        <option value="2">base 2 / binário</option>
-        <option value="8">base 8 / octal</option>
-        <option value="10">base 10 / decimal</option>
-        <option value="16">base 16 / hexadecimal</option>
-    </select>
-    <input type="number" id="ipt_numero" placeholder="Número para Converter">
-    <button onclick="Converter()">Calcular</button>
-    <button onclick="Inverter()">Inverter</button>
-    <div id="caixa_resposta">base 2: </div>
-    <div id="caixa_resposta2">base 8: </div>
-    <div id="caixa_resposta3">base 16: </div>
     <header>
         <h1>SPTecher's Machine</h1>
-        <select name="" id="">
-            <option value="black">Claro</option>
-            <option value="white">Escuro</option>
+        <select name="" id="ipt_coloracao">
+            <option value="claro">Claro</option>
+            <option value="escuro">Escuro</option>
         </select>
     </header>
     <section class="body_page">
         <h4>Digite um número decimal:</h4>
-        <select name="" id="ipt_tipo_base" onchange="Mostrar()">
+        <select name="" id="ipt_tipo_base">
             <option value="2">base 2 / binário</option>
             <option value="8">base 8 / octal</option>
             <option value="10">base 10 / decimal</option>
             <option value="16">base 16 / hexadecimal</option>
         </select>
-        <input type="number" id="ipt_numero" placeholder="Número para Converter">
-        <button onclick="Converter()">Calcular</button>
+        <input type="text" id="ipt_numero" placeholder="Número para Converter">
+            <button onclick="Converter()">Calcular</button>
         <div class="caixa_com_caixas_resposta">
-            <div id="resposta_1" class="caixa_resposta">
-                <p>base 2:</p>
+            <div id="caixa_resposta1" class="caixa_resposta">
+                <p>1º base<br></p>
             </div>
-            <div id="resposta_2" class="caixa_resposta">
-                <p>base 8:</p>
+            <div id="caixa_resposta2" class="caixa_resposta">
+                <p>2º base<br></p>
             </div>
-            <div id="resposta_3" class="caixa_resposta">
-                <p>base 16:</p>
+            <div id="caixa_resposta3" class="caixa_resposta">
+                <p>3º base<br></p>
             </div>
         </div>
     </section>
