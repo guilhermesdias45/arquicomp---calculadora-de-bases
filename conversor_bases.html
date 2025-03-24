@@ -36,6 +36,48 @@
             </div>
         </div>
     </section>
+    <section>
+        <h1>Calculadora de Operações entre Bases</h1>
+
+        <h3>Escolha a base e insira os números para as operações:</h3>
+    
+        <label for="tipo_base1">Base do 1º número:</label>
+        <select id="tipo_base1">
+            <option value="2">Binário</option>
+            <option value="8">Octal</option>
+            <option value="10">Decimal</option>
+            <option value="16">Hexadecimal</option>
+        </select>
+    
+        <label for="numero1">Número 1:</label>
+        <input type="text" id="numero1" placeholder="Digite o número 1">
+    
+        <br><br>
+    
+        <label for="tipo_base2">Base do 2º número:</label>
+        <select id="tipo_base2">
+            <option value="2">Binário</option>
+            <option value="8">Octal</option>
+            <option value="10">Decimal</option>
+            <option value="16">Hexadecimal</option>
+        </select>
+    
+        <label for="numero2">Número 2:</label>
+        <input type="text" id="numero2" placeholder="Digite o número 2">
+    
+        <br><br>
+    
+        <button onclick="operar('+')">Soma (+)</button>
+        <button onclick="operar('-')">Subtração (-)</button>
+        <button onclick="operar('*')">Multiplicação (×)</button>
+        <button onclick="operar('/')">Divisão (÷)</button>
+    
+        <h2>Resultado:</h2>
+        <p id="resultado_binario">Binário: </p>
+        <p id="resultado_octal">Octal: </p>
+        <p id="resultado_decimal">Decimal: </p>
+        <p id="resultado_hexadecimal">Hexadecimal: </p>
+    </section>
     <footer>
         <div>
             <p>Desenvolvido por:</p>
