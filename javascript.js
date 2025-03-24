@@ -46,44 +46,35 @@ function Converter() {
 
 function Exibir() {
   var coloracao = document.getElementById("ipt_coloracao").value;
-
   if (coloracao == "claro") {
-    document.getElementsByTagName("header")[0].style.backgroundColor =
-      "rgba(112, 255, 255, 0.822)";
+    document.getElementsByTagName("header")[0].classList.add("header_claro");
+    document.getElementsByTagName("header")[0].classList.remove("header_escuro");
     for (contador = 0; contador < 2; contador++) {
-      document.getElementsByClassName("body_page")[
-        contador
-      ].style.backgroundColor = "rgb(253, 255, 113)";
+      document.getElementsByClassName("body_page")[contador].classList.add("body_page_claro");
+      document.getElementsByClassName("body_page")[contador].classList.remove("body_page_escuro");
     }
     for (contador = 0; contador < 3; contador++) {
-      document.getElementsByClassName("caixa_resposta")[
-        contador
-      ].style.backgroundColor = "red";
+      document.getElementsByClassName("caixa_resposta")[contador].classList.add("caixa_resposta_claro");
+      document.getElementsByClassName("caixa_resposta")[contador].classList.remove("caixa_resposta_escuro");
     }
-    document.getElementsByTagName("footer")[0].style.backgroundColor =
-      "rgba(112, 255, 255, 0.822)";
-    document.getElementsByTagName("body")[0].style.color = "black";
+    document.getElementsByTagName("footer")[0].classList.add("footer_claro");
+    document.getElementsByTagName("footer")[0].classList.remove("footer_escuro");
+  }
+  if (coloracao == "escuro") {
+    document.getElementsByTagName("header")[0].classList.remove("header_claro");
+    document.getElementsByTagName("header")[0].classList.add("header_escuro");
+    for (contador = 0; contador < 2; contador++) {
+      document.getElementsByClassName("body_page")[contador].classList.remove("body_page_claro");
+      document.getElementsByClassName("body_page")[contador].classList.add("body_page_escuro");
+    }
+    for (contador = 0; contador < 3; contador++) {
+      document.getElementsByClassName("caixa_resposta")[contador].classList.remove("caixa_resposta_claro");
+      document.getElementsByClassName("caixa_resposta")[contador].classList.add("caixa_resposta_escuro");
+    }
+    document.getElementsByTagName("footer")[0].classList.remove("footer_claro");
+    document.getElementsByTagName("footer")[0].classList.add("footer_escuro");
   }
 
-  if (coloracao == "escuro") {
-    document.getElementsByTagName("header")[0].style.backgroundColor =
-      "#007BFF";
-    for (contador = 0; contador < 2; contador++) {
-      document.getElementsByClassName("body_page")[
-        contador
-      ].style.backgroundColor = "#1C1C1C";
-    }
-    for (contador = 0; contador < 3; contador++) {
-      document.getElementsByClassName("caixa_resposta")[
-        contador
-      ].style.backgroundColor = "yellow";
-      document.getElementsByClassName("letra_bloco")[contador].style.color =
-        "black";
-    }
-    document.getElementsByTagName("footer")[0].style.backgroundColor =
-      "#007BFF";
-    document.getElementsByTagName("body")[0].style.color = "white";
-  }
 }
 
 function Calcular() {

@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    <header>
+    <header class="header_claro">
         <h1>SPTecher's Machine V1</h1>
         <select id="ipt_coloracao" onchange="Exibir()">
             <option value="claro">Claro</option>
             <option value="escuro">Escuro</option>
         </select>
     </header>
-    <section class="body_page">
+    <section class="body_page body_page_claro">
         <h2>Digite um número decimal:</h2>
         <select id="ipt_tipo_base">
             <option value="2">base 2 / binário</option>
@@ -27,18 +27,18 @@
         <input type="text" id="ipt_numero" placeholder="Número para Converter">
         <button onclick="Converter()">Calcular</button>
         <div class="caixa_com_caixas_resposta">
-            <div id="caixa_resposta1" class="caixa_resposta">
+            <div id="caixa_resposta1" class="caixa_resposta caixa_resposta_claro">
                 <p class="letra_bloco">1º base<br></p>
             </div>
-            <div id="caixa_resposta2" class="caixa_resposta">
+            <div id="caixa_resposta2" class="caixa_resposta caixa_resposta_claro">
                 <p class="letra_bloco">2º base<br></p>
             </div>
-            <div id="caixa_resposta3" class="caixa_resposta">
+            <div id="caixa_resposta3" class="caixa_resposta caixa_resposta_claro">
                 <p class="letra_bloco">3º base<br></p>
             </div>
         </div>
     </section>
-    <section class="body_page">
+    <section class="body_page body_page_claro">
         <h2>Calculadora de Operações entre Bases:</h2>
         <h3>Informe os números, suas respectivas bases e a Operação Aritmética para calcular:</h3>
         <div class="bloco_aritmetica">
@@ -76,7 +76,7 @@
         <p id="resultado_16">Hexadecimal: </p>
     </div>
     </section>
-    <footer>
+    <footer class="footer_claro">
         <div>
             <p>Desenvolvido por:</p>
             <div class="footer_links">

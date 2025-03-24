@@ -1,5 +1,4 @@
 header{
-    background-color: rgba(112, 255, 255, 0.822);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,7 +6,6 @@ header{
 }
 
 .body_page{
-    background-color: rgb(253, 255, 113);
     min-height: 60vh;
     display: flex;
     flex-direction: column;
@@ -25,13 +23,52 @@ header{
 .caixa_resposta{
     min-width: 100px;
     min-height: 100px;
-    background-color: red;
     border: 1px black solid;
     border-radius: 15% ;
     box-shadow: 6px 3px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.caixa_resposta_claro{
+    background-color: red;
+    color: black;
+}
+
+.body_page_claro{
+    background-color: rgb(253, 255, 113);
+    color: black;
+}
+
+.header_claro{
+    background-color: rgba(112, 255, 255, 0.822);
+    color: black;
+}
+
+.footer_claro{
+    background-color: rgba(112, 255, 255, 0.822);
+    color: black;
+}
+
+.caixa_resposta_escuro{
+    background-color: yellow;
+    color: black;
+}
+
+.body_page_escuro{
+    background-color: #1C1C1C;
+    color: white;
+}
+
+.header_escuro{
+    background-color: #007BFF;
+    color: white;
+}
+
+.footer_escuro{
+    background-color: #007BFF;
+    color: white;
 }
 
 .bloco_aritmetica{
@@ -45,7 +82,6 @@ header{
 
 footer{
     min-height: 20vh;
-    background-color: rgba(112, 255, 255, 0.822);
     display: flex;
     justify-content: space-around;
     align-items: center;
